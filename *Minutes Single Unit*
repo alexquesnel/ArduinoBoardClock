@@ -1,0 +1,167 @@
+int led = 0;
+int led2 = 1;
+int led3 = 2;
+int led4 = 3;
+int led5 = 4;
+int led6 = 5;
+int led7 = 6;
+int led8 = 7;
+int led9 = 8;
+int led10 = 9;
+int led11 = 10;
+int led12 = 11;
+int led13 = 12;
+int led14 = 13;
+int y = 0;
+
+
+int blinkseconds (){
+   digitalWrite(led4, LOW); 
+   digitalWrite(led, LOW);
+
+   delay(1000);
+    digitalWrite(led, HIGH);
+    delay(1000);
+    digitalWrite(led, LOW);
+   
+   digitalWrite(led2, HIGH); 
+   delay(1000);
+   digitalWrite(led2, LOW);
+ 
+   digitalWrite(led2, HIGH); 
+   digitalWrite(led, HIGH);
+   delay(1000);
+   digitalWrite(led, LOW);
+   digitalWrite(led2, LOW);
+
+   digitalWrite(led3, HIGH); 
+   delay(1000);
+   digitalWrite(led3, LOW);
+ 
+   digitalWrite(led3, HIGH); 
+   digitalWrite(led, HIGH);
+   delay(1000);
+
+   
+   digitalWrite(led3, LOW);
+   digitalWrite(led, LOW);
+
+   digitalWrite(led3, HIGH); 
+   digitalWrite(led2, HIGH);
+   delay(1000);
+   digitalWrite(led3, LOW);
+   digitalWrite(led2, LOW);
+
+   digitalWrite(led3, HIGH); 
+   digitalWrite(led, HIGH);
+   digitalWrite(led2, HIGH);
+   delay(1000);
+   digitalWrite(led3, LOW);
+   digitalWrite(led, LOW);
+   digitalWrite(led2, LOW);
+
+   digitalWrite(led4, HIGH); 
+   delay(1000);
+
+   digitalWrite(led, HIGH);
+   delay(1000);
+
+};
+int blinktens(){
+int k ;
+
+k = blinkseconds();
+digitalWrite(led5,HIGH);
+k = blinkseconds();
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, HIGH);
+k = blinkseconds(); 
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+k = blinkseconds();
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, LOW);
+  digitalWrite(led7, HIGH);
+k = blinkseconds();
+  digitalWrite(led5, HIGH);
+k = blinkseconds();
+  digitalWrite(led5, LOW);
+  digitalWrite(led7,LOW);
+};
+
+int blinkminutes (){
+    int m;
+    m = blinktens(); 
+    digitalWrite(led8, HIGH);
+    m = blinktens(); 
+    digitalWrite(led8, LOW);
+   
+   digitalWrite(led9, HIGH); 
+   m = blinktens(); 
+
+   digitalWrite(led8, HIGH);
+   m = blinktens(); 
+   digitalWrite(led8, LOW);
+   digitalWrite(led9, LOW);
+
+   digitalWrite(led10, HIGH); 
+   m = blinktens(); 
+ 
+   digitalWrite(led8, HIGH);
+   m = blinktens(); 
+
+   digitalWrite(led10, LOW);
+   digitalWrite(led8, LOW);
+
+   digitalWrite(led10, HIGH); 
+   digitalWrite(led9, HIGH);
+   m = blinktens(); 
+   digitalWrite(led10, LOW);
+   digitalWrite(led9, LOW);
+
+   digitalWrite(led10, HIGH); 
+   digitalWrite(led9, HIGH);
+   digitalWrite(led8, HIGH);
+   m = blinktens(); 
+   digitalWrite(led10, LOW);
+   digitalWrite(led8, LOW);
+   digitalWrite(led9, LOW);
+
+   digitalWrite(led11, HIGH); 
+   m = blinktens(); 
+
+   digitalWrite(led8, HIGH);
+   m = blinktens(); 
+
+   digitalWrite(led8, LOW); 
+   digitalWrite(led8, LOW);
+};
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(led, OUTPUT); // the led is the output
+  pinMode(led2, OUTPUT); // the led is the output
+  pinMode(led3, OUTPUT); // the led is the output
+  pinMode(led4, OUTPUT); // the led is the output  
+  pinMode(led5, OUTPUT); // the led is the output
+  pinMode(led6, OUTPUT); // the led is the output
+  pinMode(led7, OUTPUT); // the led is the output 
+  pinMode(led8, OUTPUT); // the led is the output
+  pinMode(led9, OUTPUT); // the led is the output
+  pinMode(led10, OUTPUT); // the led is the output
+  pinMode(led11, OUTPUT); // the led is the output  
+  pinMode(led12, OUTPUT); // the led is the output
+  pinMode(led13, OUTPUT); // the led is the output
+  pinMode(led14, OUTPUT); // the led is the output 
+  y = 0;
+  
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+int r;
+r = blinkminutes(); 
+
+}
