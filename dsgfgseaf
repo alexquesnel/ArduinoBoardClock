@@ -1,0 +1,57 @@
+int led1 = 8;
+int led2 = 9;       
+int x = 0;                       
+#include<Wire.h>
+void setup() 
+  // put your setup code here, to run once:
+{
+pinMode(led1, OUTPUT);
+pinMode(led2, OUTPUT);
+Wire.begin(10);
+Wire.onReceive(receiveEvent);
+}
+void receiveEvent(int bytes) {
+x = Wire.read();
+}
+
+void loop() {
+
+if (x == '1') {
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+
+}
+
+if (x == '4') {
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, HIGH);
+
+}
+
+
+}
+
+
+
+#include <Wire.h>
+int x = 0;
+void setup()
+{
+Wire.begin(); // Start I2C Bus as Master
+}
+
+void loop()
+{
+Wire.beginTransmission(10); 
+Wire.write(x);
+Wire.endTransmission();
+
+x++;        // increment value
+if(x == 5) // if reached 64th position (max)
+{
+ x = 0;    // start over from lowest value
+}
+  delay(500);
+
+
+}
