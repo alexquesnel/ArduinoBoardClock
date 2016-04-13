@@ -1,3 +1,5 @@
+http://www.instructables.com/id/I2C-between-Arduinos/step2/Code/
+
 MASTER:
 
 // Include the required Wire library for I2C<br>#include 
