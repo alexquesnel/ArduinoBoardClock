@@ -12,7 +12,7 @@ int led11 = 10;
 int led12 = 11;
 int led13 = 12;
 int led14 = 13;
-int y = 0;
+int y = 0;                                      //LEDs are declared as variables.
 
 
 int blinkseconds (){
@@ -29,7 +29,7 @@ int blinkseconds (){
    delay(1000);
    digitalWrite(led, LOW);
    digitalWrite(led2, LOW);
-   digitalWrite(led3, HIGH); 
+   digitalWrite(led3, HIGH);                     //This goes through the seconds interval. 
    delay(1000);
    digitalWrite(led, HIGH);
    delay(1000);
@@ -54,7 +54,7 @@ k = blinkseconds();
 digitalWrite(led5, HIGH);
 k = blinkseconds();
   digitalWrite(led5, LOW);
-  digitalWrite(led6, HIGH);
+  digitalWrite(led6, HIGH);                      //This goes through the ten second interval.
 k = blinkseconds(); 
   digitalWrite(led5, HIGH);
   digitalWrite(led6, HIGH);
@@ -77,7 +77,7 @@ int blinkminutes (){
    digitalWrite(led8, LOW);   
    digitalWrite(led9, HIGH); 
    m = blinktens(); 
-   digitalWrite(led8, HIGH);
+   digitalWrite(led8, HIGH);                   //This goes through the minutes interval.
    m = blinktens(); 
    digitalWrite(led8, LOW);
    digitalWrite(led9, LOW);
@@ -104,7 +104,7 @@ int blinkminutes (){
 int blinktenmins () {
   int r;
 r = blinkminutes(); 
-  digitalWrite(led12, HIGH);
+  digitalWrite(led12, HIGH);                 //This goes through the ten minute intervals.
 r = blinkminutes(); 
   digitalWrite(led12, LOW);
   digitalWrite(led13, HIGH);
@@ -141,10 +141,9 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
     digitalWrite(led14, HIGH);
 int o;
-o = blinktenmins(); 
+o = blinktenmins();                              //This loops the entire code.
 
 
 }
