@@ -33,7 +33,7 @@ void loop()
   
   //counter loop
   
-  for (int counter = 1; counter < 10; ++counter) 
+  for (int counter = 0; counter < 10; ++counter) 
   {
    delay(1000);
    Num_Write(counter); 
