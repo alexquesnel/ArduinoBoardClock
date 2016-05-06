@@ -1,0 +1,71 @@
+//http://forum.arduino.cc/index.php?topic=97170.0
+
+int led1 = 1;
+int led = 2;
+int led2 = 3;
+int led3 = 4;
+int led4 = 5;
+int in = 13;
+int j = 0;
+int x = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(led1, OUTPUT);
+pinMode(2, OUTPUT); // the led is the output
+pinMode(3, OUTPUT); // the led is the output
+pinMode(4, OUTPUT); // the led is the output
+pinMode(5, OUTPUT); // the led is the output
+
+pinMode(in, INPUT); // the led is the output
+digitalWrite(in, LOW);
+
+
+digitalWrite(led, HIGH);
+}
+void loop() {
+//
+ if ((digitalRead(in) == HIGH) )
+ {digitalWrite(led1, HIGH); 
+ x = 0;} 
+
+if ((digitalRead(in) == LOW) )
+ {digitalWrite(led1, LOW);
+ 
+ if ((digitalRead(2) == HIGH) && (x == 0))
+ {digitalWrite(2,LOW);
+ digitalWrite(3,HIGH);
+ x = 1;
+ delay(2000);}
+ 
+ if ((digitalRead(3) == HIGH) && (x == 0))
+ {digitalWrite(3,LOW);
+ digitalWrite(4,HIGH);
+ x = 1;
+ delay(2000);}
+
+  if ((digitalRead(4) == HIGH) && (x == 0))
+ {digitalWrite(4,LOW);
+  digitalWrite(2,HIGH);
+  x = 1;
+  delay(2000);}
+ }
+
+
+}
+ // x = 1; 
+ // delay(100);
+//  digitalWrite(led,HIGH);
+ // digitalWrite(led2,LOW);
+//}
+
+//{ 
+ // if ((digitalRead(in == HIGH)))
+/// x = 0;
+// delay(100); 
+// digitalWrite(led,LOW);
+// digitalWrite(led2,HIGH);
+ 
+//}
+
+ //}
