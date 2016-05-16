@@ -99,6 +99,8 @@ void loop() {
   
  if ((y == 10) && (x == 0))
  {digitalWrite (10, HIGH);
+ digitalWrite (2, LOW);
+ digitalWrite (5, LOW);
  x = 1;
  y = 11;
  delay(2000);}
