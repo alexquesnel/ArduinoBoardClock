@@ -13,7 +13,11 @@ int num_array[10][7] = {  { 1,1,1,1,1,1,0 },    // 0 // this section signifies t
                           { 1,1,1,0,0,1,1 }};   // 9
                                        
 //function header
+
+int remainder; //this will be used to disply numbers above 10
 void Num_Write(int);
+
+int ten_pin = 9 ; //this will be the pin used to light an LED. This LED will represent a single 10, when on.
 
 void setup() 
 { 
@@ -31,13 +35,23 @@ void setup()
 
 void loop() 
 {
-  
+   digitalWrite(ten_pin,LOW); //this clears any 10 from previous runs
   //counter loop
-  
-  for (int counter = 0; counter < 10; ++counter) // counter starts at 0 and until 10 then goes back to 0
+ 
+  for (int counter = 1; counter <= 12; ++counter) // counter starts at 1 and until 10 then goes to 0
   {
+   if (counter<10)
+   {
+   
    delay(1000); //delay of 1 second
    Num_Write(counter); 
+   }
+   else
+   {
+    remainder = counter % 10; // this will take the remainder of the number after dividing by 10, and print it on the display
+    Num_Write(remainder);
+    digitalWrite(ten_pin, HIGH);
+   }
   }
   delay(1000); //delay of 1 second
 }
