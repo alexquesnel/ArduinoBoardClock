@@ -1,0 +1,71 @@
+//citation: http://www.allaboutcircuits.com/projects/interface-a-seven-segment-display-to-an-arduino/
+// make an array to save Sev Seg pin configuration of numbers
+
+int num_array[10][7] = {  { 1,1,1,1,1,1,0 },    // 0 // this section signifies the l.e.d.lights that will be on or off
+                          { 0,1,1,0,0,0,0 },    // 1 // 1s represent light bars that are on
+                          { 1,1,0,1,1,0,1 },    // 2 //  0s represent light bars that are off
+                          { 1,1,1,1,0,0,1 },    // 3
+                          { 0,1,1,0,0,1,1 },    // 4
+                          { 1,0,1,1,0,1,1 },    // 5
+                          { 1,0,1,1,1,1,1 },    // 6
+                          { 1,1,1,0,0,0,0 },    // 7
+                          { 1,1,1,1,1,1,1 },    // 8
+                          { 1,1,1,0,0,1,1 }};   // 9
+                                       
+//function header
+
+int remainder; //this will be used to disply numbers above 10
+void Num_Write(int);
+
+int ten_pin = 9 ; //this will be the pin used to light an LED. This LED will represent a single 10, when on.
+
+void setup() 
+{ 
+  // set pin modes
+  pinMode(2, OUTPUT);   
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(ten_pin, OUTPUT);
+  
+ 
+}
+
+void loop() 
+{
+ 
+  //counter loop
+ 
+  for (int counter = 1; counter <= 12; ++counter) // counter starts at 1 and until 10 then goes to 0
+  {
+   if (counter<10)
+   {
+   
+   
+   Num_Write(counter); 
+   delay(1000); //delay of 1 second
+   }
+   else
+   {
+    
+    remainder = counter % 10; // this will take the remainder of the number after dividing by 10, and print it on the display
+    Num_Write(remainder);
+    digitalWrite(ten_pin, HIGH);
+    delay(1000);
+   }
+  }
+    digitalWrite(ten_pin,LOW); //this clears any 10 from previous runs
+}
+
+// this functions writes values to the sev seg pins  
+void Num_Write(int number) 
+{
+  int pin= 2;
+  for (int j=0; j < 7; j++) {
+   digitalWrite(pin, num_array[number][j]);
+   pin++;
+  }
+}
