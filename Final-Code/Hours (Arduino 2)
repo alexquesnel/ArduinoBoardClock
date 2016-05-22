@@ -1,41 +1,41 @@
 //http://forum.arduino.cc/index.php?topic=97170.0
 
-int led1 = 7;
+int led1 = 7;    //declares various Led's
 int led = 2;
 int led2 = 3;
 int led3 = 4;
 int led4 = 5;
 int led5 = 10;
 int led6 = 11;
-int in = 12;
+int in = 12;   // declares pin 12 to be "in" and X and Y 
 int y = 1;
 int x = 0;
 
 void setup() {
   // put your setup code here, to run once:
-pinMode(led1, OUTPUT);
+pinMode(led1, OUTPUT);  //declares Led's to be outputs 
 pinMode(2, OUTPUT); // the led is the output
 pinMode(3, OUTPUT); // the led is the output
 pinMode(4, OUTPUT); // the led is the output
 pinMode(5, OUTPUT); // the led is the output
 pinMode(10, OUTPUT);
 pinMode(11, OUTPUT);
-pinMode(in, INPUT); // the led is the output
+pinMode(in, INPUT); // declares in as an input that is low when the code starts running 
 digitalWrite(in, LOW);
-
-
-digitalWrite(led, HIGH);
+digitalWrite(led, HIGH); //Led starts off high so the clock starts at 1am 
 }
+
+
 void loop() {
 //
- if ((digitalRead(in) == HIGH))
+ if ((digitalRead(in) == HIGH)) //if the input from the first board is high, the LED will be high as well and X = 0
  {digitalWrite(led1, HIGH); 
  x = 0;} 
 
- if ((digitalRead(in) == LOW) )
+ if ((digitalRead(in) == LOW) ) //if the input is low, the LED will be off
  {digitalWrite(led1, LOW);
 
- if ((y == 1) && (x == 0))
+ if ((y == 1) && (x == 0)) 
  {digitalWrite(2,HIGH);
  x = 1;
  y = 2;
