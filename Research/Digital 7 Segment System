@@ -43,7 +43,7 @@ void loop()
    if (counter<10)
    {
    
-   delay(1000); //delay of 1 second
+   delay(2628000); //delay of seconds in the average month i.e. 2,628,000 seconds
    Num_Write(counter); 
    }
    else
@@ -53,7 +53,7 @@ void loop()
     digitalWrite(ten_pin, HIGH);
    }
   }
-  delay(1000); //delay of 1 second
+  delay(2628000); //delay of seconds in the average month i.e. 2,628,000 seconds
 }
 
 // this functions writes values to the sev seg pins  
