@@ -51,7 +51,7 @@ void loop()
    else
    {
     
-    remainder = counter % 10; // this will take the remainder of the number after subtracting by 10, and print it on the display
+    remainder = counter % 10; // this will take the remainder of the number after dividing by 10, and print it on the display
     Num_Write(remainder);
     digitalWrite(ten_pin, HIGH);
     delay(1000);
