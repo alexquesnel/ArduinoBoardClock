@@ -1,0 +1,119 @@
+//segments
+int a = 1;
+int b = 2;
+int c = 3;
+int d = 4;
+int e = 5;
+int f = 6;
+int g = 7;
+int p = 8;
+int d4 = 9;
+int d3 = 10;
+int d2 = 11;
+int d1 = 12;
+//digits
+//other
+int buttoncount = 0;
+int loopcount = 0;
+int T = 5;
+
+void setup()
+{
+  pinMode(d1, OUTPUT);
+  pinMode(d2, OUTPUT);
+  pinMode(d3, OUTPUT);
+  pinMode(d4, OUTPUT);
+  pinMode(a, OUTPUT);
+  pinMode(b, OUTPUT);
+  pinMode(c, OUTPUT);
+  pinMode(d, OUTPUT);
+  pinMode(e, OUTPUT);
+  pinMode(f, OUTPUT);
+  pinMode(g, OUTPUT);
+  pinMode(p, OUTPUT);
+  digitalWrite(d4, LOW);
+  digitalWrite(d3, HIGH);
+  digitalWrite(d2, HIGH);
+  digitalWrite(d1, HIGH);
+ // digitalWrite(a, HIGH);
+ // digitalWrite(b, HIGH);
+ // digitalWrite(c, HIGH);
+ // digitalWrite(d, HIGH);
+ // digitalWrite(e, HIGH);
+ // digitalWrite(f, HIGH);
+ // digitalWrite(g, HIGH);
+ // digitalWrite(p, HIGH);
+ 
+}
+ 
+ 
+void loop() {
+
+if (digitalRead (d4 == LOW)){
+
+digitalWrite(a, HIGH);
+digitalWrite(b, HIGH); 
+digitalWrite(c, HIGH);
+digitalWrite(d, HIGH);
+digitalWrite(e, HIGH);
+digitalWrite(f, HIGH); 
+digitalWrite(g, LOW);
+
+
+digitalWrite(d3, LOW);
+digitalWrite(d4, HIGH);
+delay(T);
+
+}
+
+if (digitalRead (d3 == LOW)){
+
+digitalWrite(a, LOW);
+digitalWrite(b, HIGH); 
+digitalWrite(c, HIGH);
+digitalWrite(d, LOW);
+digitalWrite(e, LOW);
+digitalWrite(f, LOW); 
+digitalWrite(g, LOW);
+
+digitalWrite(d2, LOW);
+digitalWrite(d3, HIGH);
+delay(T);
+}
+
+if (digitalRead (d2 == LOW)){
+
+digitalWrite(a, HIGH);
+digitalWrite(b, LOW); 
+digitalWrite(c, HIGH);
+digitalWrite(d, HIGH);
+digitalWrite(e, HIGH);
+digitalWrite(f, HIGH); 
+digitalWrite(g, HIGH);
+
+
+digitalWrite(d4, HIGH);
+digitalWrite(d2, HIGH);
+digitalWrite(d1, LOW);
+delay(T);
+
+}
+
+if (digitalRead(d1 == LOW)){
+
+digitalWrite(a, LOW);
+digitalWrite(b, HIGH); 
+digitalWrite(c, LOW);
+digitalWrite(d, HIGH);
+digitalWrite(e, HIGH);
+digitalWrite(f, HIGH); 
+digitalWrite(g, HIGH);
+
+digitalWrite(d4, LOW);
+digitalWrite(d1, HIGH);
+delay(T);
+}
+
+
+
+}
