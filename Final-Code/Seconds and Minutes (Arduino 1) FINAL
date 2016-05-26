@@ -1,4 +1,4 @@
-int led = 0;     //declares 14 LEDs
+int led = 0;                    //declares 14 LEDs
 int led2 = 1;
 int led3 = 2;
 int led4 = 3;
