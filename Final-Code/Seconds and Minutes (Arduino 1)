@@ -12,7 +12,7 @@ int led11 = 10;
 int led12 = 11;
 int led13 = 12;
 int led14 = 13;
-int T = 1000; 
+int T = 1000;                  //declares T as 1000 (interval for the light change)
 
 
 int blinkseconds (){
@@ -50,10 +50,10 @@ int blinkseconds (){
 
 };
 int blinktens(){
-int k ;               //declares integer k as the single digit one seconds code
+int k ;                        //declares integer k as the single digit one seconds code
 
 k = blinkseconds();
-digitalWrite(led5, HIGH);  //code for the tens digit of the seconds (10,20,30,40 seconds, etc.) of the binary clock
+digitalWrite(led5, HIGH);      //code for the tens digit of the seconds (10,20,30,40 seconds, etc.) of the binary clock
 k = blinkseconds();
   digitalWrite(led5, LOW);
   digitalWrite(led6, HIGH);
@@ -72,9 +72,9 @@ k = blinkseconds();
 };
 
 int blinkminutes (){
-   int m;                      //declares  integer m as the code for the seconds portion of the clock
+   int m;                       //declares  integer m as the code for the seconds portion of the clock
    m = blinktens(); 
-   digitalWrite(led8, HIGH);  // code for the single digit for minutes
+   digitalWrite(led8, HIGH);    // code for the single digit for minutes
    m = blinktens(); 
    digitalWrite(led8, LOW);   
    digitalWrite(led9, HIGH); 
@@ -104,9 +104,9 @@ int blinkminutes (){
 };
 
 int blinktenmins () {
-  int r;                       //declares r as the code for the single minutes (1 min, 3 min, 8 min, etc.)
+  int r;                         //declares r as the code for the single minutes (1 min, 3 min, 8 min, etc.)
 r = blinkminutes(); 
-  digitalWrite(led12, HIGH);   // code for the tens digit for minutes on the binary clock (10 minutes, 30 minutes, etc.)
+  digitalWrite(led12, HIGH);     // code for the tens digit for minutes on the binary clock (10 minutes, 30 minutes, etc.)
 r = blinkminutes(); 
   digitalWrite(led12, LOW);
   digitalWrite(led13, HIGH);
@@ -123,28 +123,24 @@ r = blinkminutes();
   digitalWrite(led14, LOW);
 }
 void setup() {
-  
-  // put your setup code here, to run once:
-  pinMode(led, OUTPUT); // declares all the Led's as an output
-  pinMode(led2, OUTPUT); // the led is the output
-  pinMode(led3, OUTPUT); // the led is the output
-  pinMode(led4, OUTPUT); // the led is the output  
-  pinMode(led5, OUTPUT); // the led is the output
-  pinMode(led6, OUTPUT); // the led is the output
-  pinMode(led7, OUTPUT); // the led is the output 
-  pinMode(led8, OUTPUT); // the led is the output
-  pinMode(led9, OUTPUT); // the led is the output
-  pinMode(led10, OUTPUT); // the led is the output
-  pinMode(led11, OUTPUT); // the led is the output  
-  pinMode(led12, OUTPUT); // the led is the output
-  pinMode(led13, OUTPUT); // the led is the output
-  pinMode(led14, OUTPUT); // the led is the output 
-  
+  pinMode(led, OUTPUT);         // declares all the Led's as an output
+  pinMode(led2, OUTPUT); 
+  pinMode(led3, OUTPUT); 
+  pinMode(led4, OUTPUT); 
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT); 
+  pinMode(led7, OUTPUT); 
+  pinMode(led8, OUTPUT);
+  pinMode(led9, OUTPUT); 
+  pinMode(led10, OUTPUT); 
+  pinMode(led11, OUTPUT);  
+  pinMode(led12, OUTPUT); 
+  pinMode(led13, OUTPUT); 
+  pinMode(led14, OUTPUT); 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 int o;
-o = blinktenmins(); //declares the code for the blink minutes tens digit as "o" and loops it
+o = blinktenmins(); //declares the code for the blink minutes tens digit as "o" and runs it repeatedly
 }
