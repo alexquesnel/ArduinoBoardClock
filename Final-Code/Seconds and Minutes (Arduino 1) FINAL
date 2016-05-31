@@ -50,75 +50,75 @@ int blinkseconds (){
 
 };
 int blinktens(){
-int k ;                        //declares integer k as the single digit one seconds code
+int bt ;                        //declares integer bs as the single digit one seconds code
 
-k = blinkseconds();
+bs = blinkseconds();
 digitalWrite(led5, HIGH);      //code for the tens digit of the seconds (10,20,30,40 seconds, etc.) of the binary clock
-k = blinkseconds();
+bs = blinkseconds();
   digitalWrite(led5, LOW);
   digitalWrite(led6, HIGH);
-k = blinkseconds(); 
+bs = blinkseconds(); 
   digitalWrite(led5, HIGH);
   digitalWrite(led6, HIGH);
-k = blinkseconds();
+bs = blinkseconds();
   digitalWrite(led5, LOW);
   digitalWrite(led6, LOW);
   digitalWrite(led7, HIGH);
-k = blinkseconds();
+bs = blinkseconds();
   digitalWrite(led5, HIGH);
-k = blinkseconds();
+bs = blinkseconds();
   digitalWrite(led5, LOW);
   digitalWrite(led7,LOW);
 };
 
 int blinkminutes (){
-   int m;                       //declares  integer m as the code for the seconds portion of the clock
-   m = blinktens(); 
+   int bt;                       //declares  integer bm as the code for the seconds portion of the clock
+   bt = blinktens(); 
    digitalWrite(led8, HIGH);    // code for the single digit for minutes
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, LOW);   
    digitalWrite(led9, HIGH); 
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, HIGH);
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, LOW);
    digitalWrite(led9, LOW);
    digitalWrite(led10, HIGH); 
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, HIGH);
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, LOW);
    digitalWrite(led9, HIGH);
-   m = blinktens();  
+   bt = blinktens();  
    digitalWrite(led8, HIGH);
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led10, LOW);
    digitalWrite(led8, LOW);
    digitalWrite(led9, LOW);
    digitalWrite(led11, HIGH); 
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, HIGH);
-   m = blinktens(); 
+   bt = blinktens(); 
    digitalWrite(led8, LOW); 
    digitalWrite(led11, LOW);
 };
 
 int blinktenmins () {
-  int r;                         //declares r as the code for the single minutes (1 min, 3 min, 8 min, etc.)
-r = blinkminutes(); 
+  int bm;                         //declares bm as the code for the single minutes (1 min, 3 min, 8 min, etc.)
+bm = blinkminutes(); 
   digitalWrite(led12, HIGH);     // code for the tens digit for minutes on the binary clock (10 minutes, 30 minutes, etc.)
-r = blinkminutes(); 
+bm = blinkminutes(); 
   digitalWrite(led12, LOW);
   digitalWrite(led13, HIGH);
-r = blinkminutes(); 
+bm = blinkminutes(); 
   digitalWrite(led12, HIGH);
-r = blinkminutes(); 
+bm = blinkminutes(); 
   digitalWrite(led12, LOW);
   digitalWrite(led13, LOW);
   digitalWrite(led14, HIGH);
-r = blinkminutes(); 
+bm = blinkminutes(); 
   digitalWrite(led12, HIGH);
-r = blinkminutes(); 
+bm = blinkminutes(); 
   digitalWrite(led12, LOW);
   digitalWrite(led14, LOW);
 }
@@ -141,6 +141,6 @@ void setup() {
 
 void loop() {
 
-int o;
-o = blinktenmins(); //declares the code for the blink minutes tens digit as "o" and runs it repeatedly
+int btm;
+btm = blinktenmins();       //declares the code for the blink minutes tens digit as "btm" and runs it repeatedly
 }
