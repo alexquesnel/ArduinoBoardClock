@@ -1,6 +1,6 @@
 int a = 1;
-int b = 2;
-int c = 3;                  //sets the display integers to what they need to be
+int b = 2;      
+int c = 3;                            //sets the display integers to what they need to be
 int d = 4;
 int e = 5;
 int f = 6;
@@ -12,11 +12,11 @@ int d2 = 11;
 int d1 = 12;
 int buttoncount = 0;
 int loopcount = 0;
-int T = 5;                   //sets T (time) as 5 milliseconds
+int T = 5;                            //sets T (time) as 5 milliseconds
 
 void setup()
 {
-  pinMode(d1, OUTPUT);       //declares all of the pins as outputs, and sets the first number visible and the other three invisible
+  pinMode(d1, OUTPUT);                //declares all of the pins as outputs
   pinMode(d2, OUTPUT);
   pinMode(d3, OUTPUT);
   pinMode(d4, OUTPUT);
@@ -28,7 +28,7 @@ void setup()
   pinMode(f, OUTPUT);
   pinMode(g, OUTPUT);
   pinMode(p, OUTPUT);
-  digitalWrite(d4, LOW);
+  digitalWrite(d4, LOW);              //sets the first number visible and the other three invisible
   digitalWrite(d3, HIGH);
   digitalWrite(d2, HIGH);
   digitalWrite(d1, HIGH);
