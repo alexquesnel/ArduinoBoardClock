@@ -13,30 +13,30 @@ int x = 0;
 
 void setup() {
 
-pinMode(ledMin, OUTPUT);     //declares Led's to be outputs 
+pinMode(ledMin, OUTPUT);                  //declares Led's to be outputs 
 pinMode(led, OUTPUT); 
 pinMode(led2, OUTPUT); 
 pinMode(led3, OUTPUT); 
 pinMode(led4, OUTPUT); 
 pinMode(led5, OUTPUT);
 pinMode(led6, OUTPUT);
-pinMode(in, INPUT);        // declares "in" as an input that is low when the code starts running 
+pinMode(in, INPUT);                      // declares "in" as an input that is low when the code starts running 
 digitalWrite(in, LOW);
-digitalWrite(led, HIGH);    //Led starts off high so the clock starts at 1am 
+digitalWrite(led, HIGH);                  //Led starts off high so the clock starts at 1am 
 }
 
 
 void loop() {
 //
- if ((digitalRead(in) == HIGH)) //if the input from the first arduino is high, the LED will be high as well and X will equal 0
+ if ((digitalRead(in) == HIGH))          //if the input from the first arduino is high, the LED for the 40 mins will be high as well and X will equal 0
  {digitalWrite(ledMin, HIGH); 
  x = 0;} 
 
- if ((digitalRead(in) == LOW) ) //if the input is low, the LED will be off
+ if ((digitalRead(in) == LOW) )          //if the input is low, the LED for the 40 mins will be off
  {digitalWrite(ledMin, LOW);
 
- if ((x == 0))                  // when x = 0, a case will be run to switch the hour Led
- {switch(y) {
+ if ((x == 0))                           // when x = 0, a case will be run to switch the hour Led 
+ {switch(y) {                            
  case 1:
  digitalWrite(2,HIGH);
  x = 1;
