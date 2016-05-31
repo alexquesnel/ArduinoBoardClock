@@ -40,7 +40,7 @@ void loop() {
  case 1:
  digitalWrite(2,HIGH);
  x = 1;
- y++;
+ y++;                                    //increases Y so the next time the case is run the next led will turn on
  delay(2000);
  break;
  
