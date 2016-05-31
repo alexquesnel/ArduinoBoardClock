@@ -1,6 +1,6 @@
 int a = 1;
 int b = 2;
-int c = 3;
+int c = 3;                  //sets the display integers to what they need to be
 int d = 4;
 int e = 5;
 int f = 6;
@@ -12,11 +12,11 @@ int d2 = 11;
 int d1 = 12;
 int buttoncount = 0;
 int loopcount = 0;
-int T = 5;
+int T = 5;                   //sets T (time) as 5 milliseconds
 
 void setup()
 {
-  pinMode(d1, OUTPUT);
+  pinMode(d1, OUTPUT);       //declares all of the pins as outputs, and sets the first number visible and the other three invisible
   pinMode(d2, OUTPUT);
   pinMode(d3, OUTPUT);
   pinMode(d4, OUTPUT);
@@ -38,71 +38,71 @@ void setup()
  
 void loop() {
 
-if (digitalRead (d4 == LOW))
+if (digitalRead (d4 == LOW))         //if the first number is visible
 
 {
 
-digitalWrite(a, HIGH);
+digitalWrite(a, HIGH);              //pattern for number 0
 digitalWrite(b, HIGH); 
 digitalWrite(c, HIGH);
 digitalWrite(d, HIGH);
 digitalWrite(e, HIGH);
 digitalWrite(f, HIGH); 
 digitalWrite(g, LOW);
-digitalWrite(d3, LOW);
+digitalWrite(d3, LOW);             //sets second number visible and first number invisible
 digitalWrite(d4, HIGH);
-delay(T);
+delay(T);                          //sets a delay of T (5) milliseconds
 
 }
 
-if (digitalRead (d3 == LOW))
+if (digitalRead (d3 == LOW))       // if the second number is visible 
 
 {
 
-digitalWrite(a, LOW);
+digitalWrite(a, LOW);              //pattern for number 1
 digitalWrite(b, HIGH); 
 digitalWrite(c, HIGH);
 digitalWrite(d, LOW);
 digitalWrite(e, LOW);
 digitalWrite(f, LOW); 
 digitalWrite(g, LOW);
-digitalWrite(d2, LOW);
+digitalWrite(d2, LOW);            //sets third number visible and second number invisible
 digitalWrite(d3, HIGH);
-delay(T);
+delay(T);                         //sets a delay of T (5) milliseconds
 }
 
-if (digitalRead (d2 == LOW))
+if (digitalRead (d2 == LOW))      //if third number is visible
 
 {
 
-digitalWrite(a, HIGH);
+digitalWrite(a, HIGH);            //pattern for number 6
 digitalWrite(b, LOW); 
 digitalWrite(c, HIGH);
 digitalWrite(d, HIGH);
 digitalWrite(e, HIGH);
 digitalWrite(f, HIGH); 
 digitalWrite(g, HIGH);
-digitalWrite(d4, HIGH);
+digitalWrite(d4, HIGH);           //sets fourth number visible on and third number invisible
 digitalWrite(d2, HIGH);
 digitalWrite(d1, LOW);
-delay(T);
+delay(T);                         //sets a delay of T (5) milliseconds
 
 }
 
-if (digitalRead(d1 == LOW))
+if (digitalRead(d1 == LOW))       //if fourth number is visible  
 
 {
 
-digitalWrite(a, LOW);
+digitalWrite(a, LOW);             //pattern for number 2
 digitalWrite(b, HIGH); 
 digitalWrite(c, LOW);
 digitalWrite(d, HIGH);
 digitalWrite(e, HIGH);
 digitalWrite(f, HIGH); 
 digitalWrite(g, HIGH);
-digitalWrite(d4, LOW);
-digitalWrite(d1, HIGH);
-delay(T);
+digitalWrite(d4, LOW);           //sets first number visible and fourth number invisible
+digitalWrite(d1, HIGH);        
+delay(T);                        //sets a delay of T (5) milliseconds
 }
 
 }
